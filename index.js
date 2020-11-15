@@ -10,7 +10,8 @@ conectarDB();
 
 // Opciones de cors
 const opcionesCors = {
-    origin : process.env.FRONTURL
+    origin : process.env.FRONTURL,
+    origin : process.env.FRONTURLPROD
 }
 app.use(cors(opcionesCors));
 
