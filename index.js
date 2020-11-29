@@ -7,7 +7,11 @@ const app = express();
 // Conectar a la bd
 conectarDB();
 
-
+// Opciones de cors
+const opcionesCors = {
+    origin : process.env.FRONTURL
+}
+app.use(cors(opcionesCors));
 
 // Otras opciones
 app.use(function (req, res, next) {
