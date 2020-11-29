@@ -9,7 +9,7 @@ conectarDB();
 
 // Opciones de cors
 const opcionesCors = {
-    origin : process.env.PROD
+    origin : process.env.FRONTURL
 }
 app.use(cors(opcionesCors));
 
@@ -17,7 +17,7 @@ app.use(cors(opcionesCors));
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'https://front-tours-hskmj5u6a.vercel.app/');
+    res.setHeader('Access-Control-Allow-Origin', 'https://front-tours.vercel.app/');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
