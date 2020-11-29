@@ -17,7 +17,7 @@ app.use(cors(opcionesCors));
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'https://front-tours-q790pgvmc.vercel.app/');
+    res.setHeader('Access-Control-Allow-Origin', 'https://magic-tours-98d7irnmx.vercel.app/');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
