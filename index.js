@@ -1,7 +1,6 @@
 const express = require("express");
 const conectarDB = require("./config/db");
 const cors = require("cors");
-const conectarBD = require("./config/db");
 
 const app = express();
 
@@ -18,7 +17,7 @@ app.use(cors(opcionesCors));
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'https://front-tours-6d8vpri5u.vercel.app');
+    res.setHeader('Access-Control-Allow-Origin', 'https://front-tours-kk34pp0v1.vercel.app/');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
