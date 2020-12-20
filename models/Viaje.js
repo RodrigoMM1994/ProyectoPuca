@@ -6,11 +6,11 @@ const viajeSchema = new Schema({
         type :String,
         required : true
     },
-    imagen : {
+    precio : {
         type: String,
         required : true
     },
-    precio : {
+    imagen : {
         type: String,
         required : true
     },

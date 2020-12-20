@@ -8,7 +8,7 @@ const mesSchema = new Schema({
         required : true
     },
     imagen : {
-        type : String,
+        type :String,
         required : true
     },
     fechaCreado : {

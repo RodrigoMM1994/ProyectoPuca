@@ -9,13 +9,13 @@ exports.nuevoViaje = async (req,res,next) => {
         return res.status(400).json({ errores : errores.array() });
     }
 
-    const { titulo , imagen , mes ,precio} = req.body;
+    const { titulo , mes ,precio , imagen} = req.body;
 
     const viaje = new Viaje();
     viaje.titulo = titulo;
-    viaje.imagen = imagen;
     viaje.mes = mes;
     viaje.precio = precio;
+    viaje.imagen = imagen;
 
     try {
         await viaje.save();

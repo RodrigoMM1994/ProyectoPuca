@@ -7,13 +7,10 @@ exports.nuevoMes = async (req,res,next) => {
     if(!errores.isEmpty()){
         return res.status(400).json({ errores : errores.array() });
     }
-
-    const { imagen , nombre } = req.body;
-
+    const { nombre , imagen} = req.body;
     const mes = new Mes();
     mes.nombre = nombre;
-    mes.imagen = imagen;
-    
+    mes.imagen = imagen;    
     try {
         await mes.save();
         return res.json({ msg : `El mes ->  ${mes.nombre} se agregó correctamete`});

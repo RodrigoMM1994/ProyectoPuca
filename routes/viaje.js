@@ -7,9 +7,9 @@ const auth = require('../middleware/auth');
 router.post('/',
     [
         check("titulo","El titulo es requerido").not().isEmpty(),
-        check("imagen","La imagen de la presentacion es requerida").not().isEmpty(),
         check("mes","El id del viaje es requerido").not().isEmpty(),
         check("precio","El precio viaje es requerido").not().isEmpty(),
+        check("imagen","La imagen es requerida").not().isEmpty(),
     ],
     auth,
     viajeController.nuevoViaje

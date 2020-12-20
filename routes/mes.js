@@ -7,7 +7,7 @@ const auth = require('../middleware/auth');
 router.post('/',
     [
         check("nombre","El nombre del mes es requerido").not().isEmpty(),
-        check("imagen","La imagen de la presentacion es requerida").not().isEmpty(),
+        check("imagen","La imagen del mes es obligatoria").not().isEmpty()
     ],
     auth,
     mesController.nuevoMes
