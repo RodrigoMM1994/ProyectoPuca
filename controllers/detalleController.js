@@ -9,7 +9,7 @@ exports.nuevoDetalle = async (req,res,next) => {
         return res.status(400).json({ errores : errores.array() });
     }
 
-    const { horarios,puntoSalida,incluye, descripcion , imagen , precios, ubicacion, recomendaciones , viaje  } = req.body;
+    const { horarios,puntoSalida,incluye, descripcion , imagen , precios, ubicacion, recomendaciones , viaje , fecha } = req.body;
 
     const detalle = new Detalle();
     detalle.descripcion = descripcion;
@@ -21,6 +21,7 @@ exports.nuevoDetalle = async (req,res,next) => {
     detalle.puntoSalida = puntoSalida;
     detalle.incluye = incluye;
     detalle.viaje = viaje;
+    detalle.fecha = fecha;
 
     try {
         await detalle.save();

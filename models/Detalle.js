@@ -35,6 +35,10 @@ const detalleSchema = new Schema({
         type : String,
         required : true,
     },
+    fecha : {
+        type : String,
+        required : true,
+    },
     viaje : {
         type : mongoose.Schema.Types.ObjectId,
         ref : 'Viaje',
