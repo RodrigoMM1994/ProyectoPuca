@@ -13,6 +13,7 @@ router.post('/',
 );
 
 router.get('/',
+    auth,
     authController.usuarioAutenticado
 );
 
