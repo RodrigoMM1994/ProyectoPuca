@@ -11,7 +11,6 @@ router.post('/',
         check("precio","El precio viaje es requerido").not().isEmpty(),
         check("imagen","La imagen es requerida").not().isEmpty(),
     ],
-    auth,
     viajeController.nuevoViaje
 );
 

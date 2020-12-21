@@ -17,7 +17,6 @@ router.post('/',
         check("fecha","La fecha del viaje es requerida").not().isEmpty(),
         check("viaje","El id del viaje es requerido").not().isEmpty(),
     ],
-    auth,
     detalleController.nuevoDetalle
 );
 

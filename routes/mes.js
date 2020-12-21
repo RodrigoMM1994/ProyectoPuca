@@ -9,7 +9,6 @@ router.post('/',
         check("nombre","El nombre del mes es requerido").not().isEmpty(),
         check("imagen","La imagen del mes es obligatoria").not().isEmpty()
     ],
-    auth,
     mesController.nuevoMes
 );
 

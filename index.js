@@ -16,17 +16,6 @@ app.use(cors(opcionesCors));
 // función middleware para servir archivos estáticos
 app.use(express.static(path.join(__dirname, 'static/img_mes')));
 
-/// Configurar cabeceras y cors
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-    res.setHeader('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    next();
-});
-
-
 // Habilitar leer los valores
 app.use(express.json({limit: '100mb'}));
 
