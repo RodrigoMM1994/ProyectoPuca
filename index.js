@@ -13,14 +13,22 @@ const opcionesCors = {
 }
 app.use(cors(opcionesCors));
 
+/// Configurar cabeceras y cors
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.setHeader('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+});
+
 // función middleware para servir archivos estáticos
 app.use(express.static(path.join(__dirname, 'static/img_mes')));
 
 // Habilitar leer los valores
 app.use(express.json({limit: '100mb'}));
 
-// Habilitar carpeta publica
-app.use(express.static("static"));
 
 // Rutas de la app
 app.use('/api/mes', require('./routes/mes'));
