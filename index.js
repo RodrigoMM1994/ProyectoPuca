@@ -37,6 +37,7 @@ app.use('/api/usuarios', require('./routes/usuario'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/detalle', require('./routes/detalle'));
 app.use('/api/archivos', require('./routes/archivos'));
+app.use('/api/email', require('./routes/mail'));
 
 const port = process.env.PORT || 4000;
 app.listen(port,"0.0.0.0", () => {
